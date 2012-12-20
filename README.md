@@ -5,6 +5,10 @@ This is a Python 2.7.3 build for Boot2Gecko. It is likely also compatible with A
 
 This opens up some interesting possibilities for (build) automation and security tools.
 
+A precompiled version is included as the `python.tgz` archive.
+
+Please file issues if things don't work as expected.
+
 Building
 ========
 
