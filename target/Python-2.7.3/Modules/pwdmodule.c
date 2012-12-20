@@ -75,7 +75,7 @@ mkpwent(struct passwd *p)
 #endif
     SETI(setIndex++, p->pw_uid);
     SETI(setIndex++, p->pw_gid);
-#ifdef __VMS
+#if defined(__VMS) || defined(ANDROID)
     SETS(setIndex++, "");
 #else
     SETS(setIndex++, p->pw_gecos);
