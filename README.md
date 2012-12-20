@@ -37,6 +37,7 @@ Using
 Once you have copied Python to your device you have to set `LD_LIBRARY_PATH`, `PYTHONHOME` and `PATH` correctly:
 
 ```
+$ adb shell
 root@android:/data # export LD_LIBRARY_PATH=/data/python/lib                   
 root@android:/data # export PYTHONHOME=/data/python
 root@android:/data # export PATH=$PATH:/data/python/bin
