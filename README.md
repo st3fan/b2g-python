@@ -1,3 +1,6 @@
+What is this?
+=============
+
 This is a Python 2.7.3 build for Boot2Gecko. It is likely also compatible with Android but I have only tested with Boot2Gecko.
 
 This opens up some interesting possibilities for (build) automation and security tools.
@@ -11,15 +14,20 @@ Building this is easy with the provided scripts. First you need to build a host 
 $ ./build-host.sh
 ```
 
+Then build for the target:
+
+```
+$ ./build-target.sh
+```
+
+This will install in the `install` directory and also create a `python.tgz` archive.
+
 Installing
 ==========
 
-If you build was succesful then you can install Python using the `adb` tool, which is part of the Android SDK. You will need to have a recent version installed and on your `PATH`:
+If your build was succesful then you can install Python using the `adb` tool, which is part of the Android SDK. You will need to have a recent version installed and on your `PATH`:
 
 ```
-$ cd b2g-python
-$ build-host.sh
-$ build-target.sh
 $ adb push install/data/python /data/python
 ```
 
