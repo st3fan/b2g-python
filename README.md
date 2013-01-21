@@ -33,19 +33,15 @@ If your build was succesful then you can install Python using the `adb` tool, wh
 
 ```
 $ adb push install/data/python /data/python
+$ adb push python /system/bin/python
+$ adb shell chmod 766 /system/bin/python
 ```
 
-Using
-=====
-
-Once you have copied Python to your device you have to set `LD_LIBRARY_PATH`, `PYTHONHOME` and `PATH` correctly:
+Now you should be able to run python with
 
 ```
 $ adb shell
-root@android:/data # export LD_LIBRARY_PATH=/data/python/lib                   
-root@android:/data # export PYTHONHOME=/data/python
-root@android:/data # export PATH=$PATH:/data/python/bin
-root@android:/data # python
+# python
 Python 2.7.3 (default, Dec 20 2012, 14:25:30) 
 [GCC 4.4.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.

@@ -1,0 +1,6 @@
+#!/system/bin/sh
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/python/lib
+export LD_PRELOAD=$LD_PRELOAD:/data/python/lib/libpython2.7.so
+export PYTHONHOME=/data/python
+/data/python/bin/python $@
